@@ -1,11 +1,18 @@
 import Greeting from "./components/Greeting"
 
-function App(){
-  return(<>
-    <Greeting name = "Bintang" age = {21}/>
-    <Greeting name = "Mada" age = {22}/>
+function App() {
+
+  function handleClick() {
+    console.log("Clicked");
+  }
+
+  return (
+    <>
+      <button onClick={handleClick}>Click Me</button>
     </>
+
   )
+
 }
 
 export default App
