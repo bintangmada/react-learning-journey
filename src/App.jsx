@@ -1,8 +1,10 @@
 import Greeting from "./components/Greeting"
 
 function App(){
-  return(
+  return(<>
     <Greeting name = "Bintang" age = {21}/>
+    <Greeting name = "Mada" age = {22}/>
+    </>
   )
 }
 
