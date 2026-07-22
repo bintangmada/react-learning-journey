@@ -2,19 +2,16 @@ import Greeting from "./components/Greeting"
 
 function App() {
 
-  function handleClick(name) {
-    console.log(`Halo ${name}`);
-  }
-
-  const callback = () => {
-    handleClick("Bintang")
+  function sayHello(event, name){
+    console.log(event.target)
+    console.log(name)
   }
 
   return (
     <>
-      <button onClick={callback}>Click Me</button>
+      <button onClick={(event) => sayHello(event, "Bintang")}>Click Me</button>
 
-      <button onClick={handleClick}>Click Me 2</button>
+    
     </>
 
   )
