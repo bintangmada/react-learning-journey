@@ -1,9 +1,13 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Greeting from "./components/Greeting"
 
 function App() {
 
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("render ke", count)
+  })
 
   return (
     <>
