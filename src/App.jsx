@@ -1,19 +1,31 @@
+import { useState } from "react"
 import Greeting from "./components/Greeting"
 
 function App() {
 
-  function sayHello(event, name){
-    console.log(event.target)
-    console.log(name)
-  }
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <button onClick={(event) => sayHello(event, "Bintang")}>Click Me</button>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
 
-    
+      <Header></Header>
+
     </>
+  )
 
+
+}
+
+
+function Header() {
+
+  return (
+    <>
+      <h2>Ini adalah header</h2>
+    </>
   )
 
 }
