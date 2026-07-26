@@ -7,7 +7,12 @@ function App() {
 
   useEffect(() => {
     console.log("Fetch user")
-  },[])
+
+    return () => {
+      console.log("cleanup")
+    }
+
+  },[count])
  
   return (
     <>
