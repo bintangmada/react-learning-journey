@@ -1,35 +1,26 @@
 import { useEffect, useState } from "react"
 import Greeting from "./components/Greeting"
 
-function App() {
+function App2() {
 
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-
-    console.log("start")
-    const id = setInterval(() => {
-      console.log("tick")
-    },1000)
+    console.log("Fetch user")
 
     return () => {
-      console.log("clean interval")
-      clearInterval(id)
+      console.log("cleanup")
     }
 
-
-  }, [count])
-
-
-
-
-
+  },[count])
+ 
   return (
     <>
-
       <h1>{count}</h1>
       <button onClick={() => setCount(count + 1)}>+</button>
       <button onClick={() => setCount(count - 1)}>-</button>
+
+      <Header></Header>
 
     </>
   )
@@ -38,4 +29,14 @@ function App() {
 }
 
 
-export default App
+function Header() {
+
+  return (
+    <>
+      <h2>Ini adalah header</h2>
+    </>
+  )
+
+}
+
+export default App2
