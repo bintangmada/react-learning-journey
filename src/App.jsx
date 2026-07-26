@@ -6,9 +6,9 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log("render ke", count)
-  })
-
+    console.log("Fetch user")
+  },[])
+ 
   return (
     <>
       <h1>{count}</h1>
