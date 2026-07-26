@@ -5,23 +5,11 @@ function App() {
 
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
+  function handleClick(){
+    return "Click"
+  }
 
-    console.log("start")
-    const id = setInterval(() => {
-      console.log("tick")
-    },1000)
-
-    return () => {
-      console.log("clean interval")
-      clearInterval(id)
-    }
-
-
-  }, [count])
-
-
-
+  console.log(handleClick)
 
 
   return (
